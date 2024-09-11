@@ -68,6 +68,24 @@ type IconItem = {
 	duration: string;
 };
 
+const Ribbon = ({ duration }: { duration: string }) => (
+	<div
+		style={{
+			backgroundColor: ribbonBgColor,
+		}}
+		className="absolute left-[-200px] top-[100px] w-[800px] px-[200px] py-4 flex items-center justify-center rotate-[-45deg]"
+	>
+		<p
+			style={{
+				color: ribbonTextColor,
+			}}
+			className="tracking-[3.50px] text-7xl font-extrabold italic text-center leading-tight max-w-full break-words"
+		>
+			{duration}
+		</p>
+	</div>
+);
+
 export default function IconGenerator() {
 	const [items, setItems] = useState<IconItem[]>(icons);
 
@@ -108,21 +126,7 @@ export default function IconGenerator() {
 					className="w-[1024px] h-[1024px] border-8 border-[#002643] overflow-hidden flex flex-col relative"
 					style={{ backgroundColor: iconBgColor }}
 				>
-					<div
-						style={{
-							backgroundColor: ribbonBgColor,
-						}}
-						className="absolute left-[-200px] top-[100px] w-[800px] px-[200px] py-4 flex items-center justify-center rotate-[-45deg]"
-					>
-						<p
-							style={{
-								color: ribbonTextColor,
-							}}
-							className="tracking-[3.50px] text-7xl font-extrabold italic text-center leading-tight max-w-full break-words"
-						>
-							{items[0].duration}
-						</p>
-					</div>
+					<Ribbon duration={items[0].duration} />
 					<CardContent duration={items[0].duration} title={items[0].title} />
 					<Footer footerText={items[0].footerText} />
 				</div>

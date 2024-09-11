@@ -1,10 +1,10 @@
-// export const iconBgColor = "#93093a";
-// export const ribbonTextColor = "#002a4e";
-// export const ribbonBgColor = "#e1eef9";
+export const iconBgColor = "#93093a";
+export const ribbonTextColor = "#002a4e";
+export const ribbonBgColor = "#e1eef9";
 
-export const ribbonBgColor = "#fac35f";
-export const ribbonTextColor = "#002643";
-export const iconBgColor = "#002493";
+// export const ribbonBgColor = "#fac35f";
+// export const ribbonTextColor = "#002643";
+// export const iconBgColor = "#002493";
 export const icons = [
 	{
 		title: "Barber",
